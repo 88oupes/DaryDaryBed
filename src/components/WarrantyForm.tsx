@@ -234,7 +234,7 @@ export const WarrantyForm: React.FC<WarrantyFormProps> = ({ onSubmitSuccess }) =
               <div>
                 <p className="font-semibold text-base text-[#292331]">Matelas</p>
                 <p className="font-arabic text-sm text-[#61218B] font-medium" dir="rtl">
-                  مرتبة
+                  ناموسية
                 </p>
               </div>
             </div>
@@ -296,7 +296,7 @@ export const WarrantyForm: React.FC<WarrantyFormProps> = ({ onSubmitSuccess }) =
                     >
                       {MATTRESS_CATALOGUE.map((model) => (
                         <option key={model.id} value={model.name}>
-                          {model.name} — {model.arabicName} ({model.warrantyYears} ans de garantie)
+                          {model.name} ({model.warrantyYears} ans de garantie)
                         </option>
                       ))}
                     </select>
