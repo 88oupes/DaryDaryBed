@@ -95,11 +95,11 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ data, onClos
               </div>
               <p className="text-sm font-bold text-[#292331]">
                 {reg.productType}
-                {isMattress && ` — ${reg.mattressModel}`}
+                {reg.mattressModel && ` — ${reg.mattressModel}`}
               </p>
-              {isMattress && (
+              {reg.mattressDimensions && (
                 <p className="text-[#61218B] font-medium">
-                  Dimensions : {reg.mattressDimensions} cm
+                  Dimensions : {reg.mattressDimensions}
                 </p>
               )}
             </div>

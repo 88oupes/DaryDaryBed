@@ -13,7 +13,7 @@ import {
   Loader2,
   ArrowRight,
 } from 'lucide-react';
-import { MATTRESS_CATALOGUE, MOROCCAN_CITIES } from '../data/catalogue.ts';
+import { MATTRESS_CATALOGUE, SALON_CATALOGUE, MOROCCAN_CITIES } from '../data/catalogue.ts';
 
 export interface WarrantyFormData {
   productType: 'Matelas' | 'Salon';
@@ -37,6 +37,8 @@ export const WarrantyForm: React.FC<WarrantyFormProps> = ({ onSubmitSuccess }) =
   const [mattressDimensions, setMattressDimensions] = useState<string>(
     MATTRESS_CATALOGUE[0].dimensions[4] // 160 × 190 default
   );
+  const [salonModel, setSalonModel] = useState<string>(SALON_CATALOGUE[0].name);
+  const [salonDimensions, setSalonDimensions] = useState<string>('');
 
   const [lastName, setLastName] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -94,13 +96,21 @@ export const WarrantyForm: React.FC<WarrantyFormProps> = ({ onSubmitSuccess }) =
       return;
     }
 
+    if (productType === 'Salon' && (!salonModel || !salonDimensions.trim())) {
+      setErrorMessage('Veuillez sélectionner le modèle et indiquer les dimensions de votre salon (hauteur × largeur en cm).');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      const selectedModel = productType === 'Matelas' ? mattressModel : salonModel;
+      const selectedDimensions = productType === 'Matelas' ? mattressDimensions : salonDimensions.trim();
+
       const payload: WarrantyFormData = {
         productType,
-        mattressModel: productType === 'Matelas' ? mattressModel : '',
-        mattressDimensions: productType === 'Matelas' ? mattressDimensions : '',
+        mattressModel: selectedModel,
+        mattressDimensions: selectedDimensions,
         lastName: lastName.trim(),
         firstName: firstName.trim(),
         phoneNumber: phoneNumber.trim(),
@@ -337,6 +347,66 @@ export const WarrantyForm: React.FC<WarrantyFormProps> = ({ onSubmitSuccess }) =
                 </span>
                 <span className="text-[#61218B] font-medium hidden sm:inline">
                   Conforme au catalogue officiel Dary
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* MENUS CONDITIONNELS : UNIQUEMENT SI LE CLIENT CHOISIT SALON */}
+          {productType === 'Salon' && (
+            <div className="bg-[#F7F2EB]/70 border border-[#EDE4F2] rounded-2xl p-4 sm:p-5 transition-all mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Modèle de salon */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs font-semibold text-[#292331]">
+                    <span>Modèle de salon *</span>
+                    <span className="font-arabic text-xs text-[#61218B]" dir="rtl">
+                      نموذج الصالون *
+                    </span>
+                  </div>
+                  <div className="relative">
+                    <select
+                      value={salonModel}
+                      onChange={(e) => setSalonModel(e.target.value)}
+                      required
+                      className="w-full appearance-none bg-white border border-[#EDE4F2] focus:border-[#61218B] focus:ring-1 focus:ring-[#61218B] rounded-xl px-3.5 py-2.5 text-sm font-medium text-[#292331] pr-9 outline-none transition-colors"
+                    >
+                      {SALON_CATALOGUE.map((model) => (
+                        <option key={model.id} value={model.name}>
+                          {model.name} ({model.warrantyYears} ans de garantie)
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="w-4 h-4 text-[#6F7072] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* Dimensions (Hauteur × Largeur) */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs font-semibold text-[#292331]">
+                    <span>Dimensions (Hauteur × Largeur) *</span>
+                    <span className="font-arabic text-xs text-[#61218B]" dir="rtl">
+                      المقاسات (الارتفاع × العرض) *
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    value={salonDimensions}
+                    onChange={(e) => setSalonDimensions(e.target.value)}
+                    placeholder="Ex. 70 × 200 cm (ou Hauteur × Largeur)"
+                    required
+                    className="w-full bg-white border border-[#EDE4F2] focus:border-[#61218B] focus:ring-1 focus:ring-[#61218B] rounded-xl px-3.5 py-2.5 text-sm font-medium text-[#292331] placeholder:text-[#6F7072]/60 outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              {/* Helper badge */}
+              <div className="mt-3 flex items-center justify-between text-[11px] text-[#6F7072]">
+                <span>
+                  Garantie constructeur officielle pour <strong>{salonModel}</strong>
+                </span>
+                <span className="text-[#61218B] font-medium hidden sm:inline">
+                  Indiquez la hauteur × largeur en cm
                 </span>
               </div>
             </div>

@@ -1,5 +1,22 @@
 [
   {
+    "id": "gar_1791460850079_3b3yl",
+    "reference": "DARY-GAR-641503",
+    "date": "08/10/2026 13:00:50",
+    "productType": "Salon",
+    "mattressModel": "Salon Medina HR",
+    "mattressDimensions": "70 × 200 cm",
+    "lastName": "Tazi",
+    "firstName": "Hamza",
+    "phoneNumber": "0661998877",
+    "email": "hamza@example.com",
+    "city": "Casablanca — الدار البيضاء",
+    "consent": true,
+    "syncedToGoogleSheets": true,
+    "createdAt": "2026-10-08T12:00:50.079Z",
+    "sheetsResponse": "{\"status\":\"success\",\"message\":\"Garantie enregistrée dans Google Sheets\",\"reference\":\"DARY-GAR-641503\",\"sheetName\":\"Sheet1\",\"rowIndex\":8}"
+  },
+  {
     "id": "gar_1791458383680_fli41",
     "reference": "DARY-GAR-590409",
     "date": "08/10/2026 12:19:43",

@@ -115,6 +115,34 @@ export const MATTRESS_CATALOGUE: MattressModel[] = [
   },
 ];
 
+export interface SalonModel {
+  id: string;
+  name: string;
+  arabicName: string;
+  warrantyYears: number;
+}
+
+export const SALON_CATALOGUE: SalonModel[] = [
+  {
+    id: 'salon-medina-hr',
+    name: 'Salon Medina HR',
+    arabicName: 'صالون المدينة إتش آر',
+    warrantyYears: 30,
+  },
+  {
+    id: 'salon-rim-33',
+    name: 'Salon RIM 33',
+    arabicName: 'صالون ريم 33',
+    warrantyYears: 25,
+  },
+  {
+    id: 'salon-hala',
+    name: 'Salon HALA',
+    arabicName: 'صالون هالة',
+    warrantyYears: 20,
+  },
+];
+
 export interface MoroccanCity {
   fr: string;
   ar: string;

@@ -258,6 +258,13 @@ app.post('/api/register-warranty', async (req: Request, res: Response) => {
       if (!mattressDimensions || !mattressDimensions.trim()) {
         return res.status(400).json({ success: false, error: 'Les dimensions du matelas sont obligatoires.' });
       }
+    } else if (productType === 'Salon') {
+      if (!mattressModel || !mattressModel.trim()) {
+        return res.status(400).json({ success: false, error: 'Le modèle du salon est obligatoire.' });
+      }
+      if (!mattressDimensions || !mattressDimensions.trim()) {
+        return res.status(400).json({ success: false, error: 'Les dimensions du salon (hauteur × largeur) sont obligatoires.' });
+      }
     }
 
     if (!lastName || !lastName.trim()) {
@@ -297,8 +304,8 @@ app.post('/api/register-warranty', async (req: Request, res: Response) => {
       reference,
       date: dateStr,
       productType,
-      mattressModel: productType === 'Matelas' ? mattressModel.trim() : '',
-      mattressDimensions: productType === 'Matelas' ? mattressDimensions.trim() : '',
+      mattressModel: (mattressModel || '').trim(),
+      mattressDimensions: (mattressDimensions || '').trim(),
       lastName: lastName.trim(),
       firstName: firstName.trim(),
       phoneNumber: phoneNumber.trim(),

@@ -33,6 +33,9 @@ export default async function handler(req: any, res: any) {
     if (productType === 'Matelas' && (!mattressModel || !mattressDimensions)) {
       return res.status(400).json({ success: false, error: 'Modèle et dimensions requis pour un matelas.' });
     }
+    if (productType === 'Salon' && (!mattressModel || !mattressDimensions)) {
+      return res.status(400).json({ success: false, error: 'Modèle et dimensions requis pour un salon.' });
+    }
 
     const randomDigits = Math.floor(100000 + Math.random() * 900000);
     const reference = `DARY-GAR-${randomDigits}`;
@@ -50,8 +53,8 @@ export default async function handler(req: any, res: any) {
       reference,
       date: dateStr,
       productType,
-      mattressModel: productType === 'Matelas' ? mattressModel.trim() : '',
-      mattressDimensions: productType === 'Matelas' ? mattressDimensions.trim() : '',
+      mattressModel: (mattressModel || '').trim(),
+      mattressDimensions: (mattressDimensions || '').trim(),
       lastName: lastName?.trim() || '',
       firstName: firstName?.trim() || '',
       phoneNumber: phoneNumber?.trim() || '',
