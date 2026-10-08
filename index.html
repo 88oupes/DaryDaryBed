@@ -2,6 +2,33 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var _fetchFn = window.fetch;
+          var descriptor = {
+            get: function() { return _fetchFn; },
+            set: function(newFn) { _fetchFn = newFn; },
+            configurable: true,
+            enumerable: true
+          };
+          Object.defineProperty(window, 'fetch', descriptor);
+          if (window.Window && window.Window.prototype) {
+            try {
+              Object.defineProperty(window.Window.prototype, 'fetch', descriptor);
+            } catch (_) {}
+          }
+        } catch (_) {}
+
+        window.addEventListener('error', function(e) {
+          if (e && ((e.filename && e.filename.indexOf('chrome-extension:') !== -1) || (e.message && e.message.indexOf('fetch') !== -1))) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dary — Bed & Living | Enregistrement de Garantie</title>
     <meta name="description" content="Portail officiel d'enregistrement et d'activation de garantie constructeur pour matelas et salons Dary Bed & Living au Maroc." />
