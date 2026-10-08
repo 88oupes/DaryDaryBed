@@ -1,0 +1,6 @@
+{
+  "name": "Dary — Bed & Living | Enregistrement de Garantie",
+  "description": "Portail officiel d'enregistrement et d'activation de garantie constructeur pour matelas et salons Dary Bed & Living au Maroc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

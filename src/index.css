@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dary-violet: #61218B;
+  --color-dary-dark: #34134F;
+  --color-dary-ivory: #F7F2EB;
+  --color-dary-lavender: #EDE4F2;
+  --color-dary-gray: #6F7072;
+  --color-dary-ink: #292331;
+  --font-sans: "Outfit", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-arabic: "Cairo", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dary-ivory);
+  color: var(--color-dary-ink);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
