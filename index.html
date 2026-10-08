@@ -9,40 +9,12 @@
     <meta property="og:description" content="Portail officiel d'enregistrement et d'activation de garantie constructeur pour matelas et salons Dary Bed & Living au Maroc." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script>
-      (function() {
-        try {
-          const originalFetch = window.fetch ? window.fetch.bind(window) : null;
-          let currentFetch = originalFetch;
-          Object.defineProperty(window, 'fetch', {
-            get: function() {
-              return currentFetch;
-            },
-            set: function(fn) {
-              currentFetch = fn;
-            },
-            configurable: true,
-            enumerable: true,
-          });
-        } catch (_) {}
-
-        // Prevent browser extension injection errors from crashing the application
-        window.addEventListener('error', function(e) {
-          if (e && ((e.filename && e.filename.startsWith('chrome-extension://')) || (e.message && e.message.includes('Cannot set property fetch')))) {
-            e.stopImmediatePropagation();
-            e.preventDefault();
-            return true;
-          }
-        }, true);
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-[#F7F2EB] text-[#292331] antialiased selection:bg-[#61218B] selection:text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
