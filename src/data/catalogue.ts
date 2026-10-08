@@ -9,9 +9,9 @@ export interface MattressModel {
 export const MATTRESS_CATALOGUE: MattressModel[] = [
   {
     id: 'feelsoft-hr-plus',
-    name: 'Feelsoft Hr+',
+    name: 'Feel Soft HR+',
     arabicName: 'فيل سوفت إتش آر بلس',
-    warrantyYears: 10,
+    warrantyYears: 20,
     dimensions: [
       '90 × 190',
       '100 × 190',
@@ -31,7 +31,7 @@ export const MATTRESS_CATALOGUE: MattressModel[] = [
     id: 'feelsoft-hr',
     name: 'Feelsoft Hr',
     arabicName: 'فيل سوفت إتش آر',
-    warrantyYears: 8,
+    warrantyYears: 17,
     dimensions: [
       '90 × 190',
       '100 × 190',
@@ -51,7 +51,7 @@ export const MATTRESS_CATALOGUE: MattressModel[] = [
     id: 'feelsoft-confort',
     name: 'Feelsoft Confort',
     arabicName: 'فيل سوفت كونفور',
-    warrantyYears: 7,
+    warrantyYears: 17,
     dimensions: [
       '90 × 190',
       '100 × 190',
@@ -71,7 +71,7 @@ export const MATTRESS_CATALOGUE: MattressModel[] = [
     id: 'consoft-33',
     name: 'Consoft 33',
     arabicName: 'كونسوفت 33',
-    warrantyYears: 5,
+    warrantyYears: 15,
     dimensions: [
       '90 × 190',
       '100 × 190',
@@ -88,9 +88,29 @@ export const MATTRESS_CATALOGUE: MattressModel[] = [
   },
   {
     id: 'yara',
-    name: 'YARA',
+    name: 'Yara',
     arabicName: 'يارا',
-    warrantyYears: 5,
+    warrantyYears: 10,
+    dimensions: [
+      '90 × 190',
+      '100 × 190',
+      '120 × 190',
+      '140 × 190',
+      '160 × 190',
+      '180 × 190',
+      '90 × 200',
+      '120 × 200',
+      '140 × 200',
+      '160 × 200',
+      '180 × 200',
+      '200 × 200',
+    ],
+  },
+  {
+    id: 'rahb',
+    name: 'Rahb',
+    arabicName: 'رحب',
+    warrantyYears: 6,
     dimensions: ['90 × 190', '140 × 190'],
   },
 ];
