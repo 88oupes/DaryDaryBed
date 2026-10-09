@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
           <div className="space-y-2">
             <img
               src={OFFICIAL_DARY_LOGO_URL}
-              alt="Dary Bed & Living"
+              alt="Dary Bed"
               className="h-9 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
             <p className="text-xs text-[#6F7072] max-w-sm">
-              Dary — Bed & Living. Fabricant d'excellence de literie haut de gamme et salons contemporains au Maroc.
+              Dary Bed. Fabricant d'excellence de literie haut de gamme et salons contemporains au Maroc.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-6 border-t border-[#EDE4F2] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
-          <p>© {new Date().getFullYear()} Dary Bed & Living. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Dary Bed. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

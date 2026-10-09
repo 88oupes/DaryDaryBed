@@ -40,7 +40,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ data, onClos
             </div>
             <div>
               <p className="text-xs uppercase tracking-wider text-[#EDE4F2] font-semibold">
-                Certificat Officiel Dary Bed & Living
+                Certificat Officiel Dary Bed
               </p>
               <h3 className="text-lg font-bold text-white">Garantie Constructeur Activée</h3>
             </div>
@@ -59,7 +59,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ data, onClos
           <div className="flex items-center justify-between border-b border-[#EDE4F2] pb-4">
             <img
               src={OFFICIAL_DARY_LOGO_URL}
-              alt="Dary Bed & Living"
+              alt="Dary Bed"
               className="h-8 sm:h-9 w-auto object-contain"
               referrerPolicy="no-referrer"
             />

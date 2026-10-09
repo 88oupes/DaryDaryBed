@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 
-export const OFFICIAL_DARY_LOGO_URL = 'https://res.cloudinary.com/psbqhe7h/image/upload/v1791452763/Daryy_beed.png';
+export const OFFICIAL_DARY_LOGO_URL = 'https://res.cloudinary.com/psbqhe7h/image/upload/v1791549959/Sans_titre-40.png';
 
 export const Header: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center">
           <img
             src={OFFICIAL_DARY_LOGO_URL}
-            alt="Dary Bed & Living"
+            alt="Dary Bed"
             className="h-10 sm:h-11 w-auto object-contain"
             referrerPolicy="no-referrer"
           />

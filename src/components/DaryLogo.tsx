@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const OFFICIAL_DARY_LOGO_URL =
-  'https://res.cloudinary.com/psbqhe7h/image/upload/v1791452763/Daryy_beed.png';
+  'https://res.cloudinary.com/psbqhe7h/image/upload/v1791549959/Sans_titre-40.png';
 
 interface DaryLogoProps {
   className?: string;
@@ -14,7 +14,7 @@ export const DaryLogo: React.FC<DaryLogoProps> = ({
   return (
     <img
       src={OFFICIAL_DARY_LOGO_URL}
-      alt="Dary Bed & Living"
+      alt="Dary Bed"
       className={`${className} w-auto object-contain`}
       referrerPolicy="no-referrer"
     />

@@ -1,5 +1,38 @@
 [
   {
+    "id": "gar_1791546502901_syrxz",
+    "reference": "DARY-GAR-183855",
+    "date": "09/10/2026 12:48:22",
+    "productType": "Salon",
+    "mattressModel": "Salon Medina HR",
+    "mattressDimensions": "L: 70 × Lg: 220 cm (H: 28 cm)",
+    "lastName": "Bennani",
+    "firstName": "Sami",
+    "phoneNumber": "0661334455",
+    "email": "sami@example.com",
+    "city": "Ifrane",
+    "consent": true,
+    "syncedToGoogleSheets": true,
+    "createdAt": "2026-10-09T11:48:22.901Z",
+    "sheetsResponse": "{\"status\":\"success\",\"message\":\"Garantie enregistrée dans Google Sheets\",\"reference\":\"DARY-GAR-183855\",\"sheetName\":\"Sheet1\",\"rowIndex\":10}"
+  },
+  {
+    "id": "gar_1791546481340_1bd5i",
+    "reference": "DARY-GAR-897271",
+    "date": "09/10/2026 12:48:01",
+    "productType": "Matelas",
+    "mattressModel": "Feel Soft HR+",
+    "mattressDimensions": "160 × 190",
+    "lastName": "Alaoui",
+    "firstName": "Karim",
+    "phoneNumber": "0661223344",
+    "email": "karim@example.com",
+    "city": "Ifrane",
+    "consent": true,
+    "syncedToGoogleSheets": false,
+    "createdAt": "2026-10-09T11:48:01.340Z"
+  },
+  {
     "id": "gar_1791460850079_3b3yl",
     "reference": "DARY-GAR-641503",
     "date": "08/10/2026 13:00:50",

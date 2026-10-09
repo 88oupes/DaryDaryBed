@@ -14,7 +14,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className="absolute inset-0 z-0">
         <img
           src={imageSrc}
-          alt="Chambre confortable Dary Bed & Living"
+          alt="Chambre confortable Dary Bed"
           className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]"
           referrerPolicy="no-referrer"
           onError={(e) => {
@@ -45,13 +45,13 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           className="font-arabic text-xl sm:text-2xl font-bold text-[#EDE4F2] mb-4 text-right sm:text-left leading-normal"
           dir="rtl"
         >
-          تسجيل وتفعيل بطاقة الضمان الرسمية
+          تسجيل وتفعيل بطاقة الضمان
         </h2>
 
         {/* Reassuring Text */}
         <p className="text-sm sm:text-base text-[#EDE4F2]/90 leading-relaxed max-w-xl font-normal">
           Activez votre garantie constructeur pour vos matelas et salons Dary afin de
-          bénéficier de notre service après-vente agréé partout au Maroc.
+          bénéficier de notre service après-vente.
         </p>
       </div>
     </div>
