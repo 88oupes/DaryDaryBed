@@ -37,7 +37,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
         {/* Main Title (French) */}
         <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-2 leading-tight">
-          Enregistrement de Garantie
+          Enregistrement et activation de garantie
         </h1>
 
         {/* Title (Arabic) */}
